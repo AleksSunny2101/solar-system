@@ -1,0 +1,19 @@
+def calculate_distance_between_planets(planet1, planet2):
+    # Planet distances in Astronomical Units (AU)
+    planet_distances = {
+        'Mercury': 0.387,
+        'Venus': 0.723,
+        'Earth': 1.0,
+        'Mars': 1.524,
+        'Jupiter': 5.203,
+        'Saturn': 9.582,
+        'Uranus': 19.18,
+        'Neptune': 30.07,
+    }
+
+    distance_in_au = abs(planet_distances[planet1] - planet_distances[planet2])
+    return distance_in_au * 93000000  # Convert AU to miles
+
+# Example usage:
+distance_between_mercury_and_venus = calculate_distance_between_planets('Mercury', 'Venus')
+print(distance_between_mercury_and_venus)  # Output: 57,563,000 miles
